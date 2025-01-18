@@ -12,10 +12,11 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-transparent border-b-violet-700 p-1">
+            <header className="bg-transparent p-1 px-4 top-0 left-0">
                 <nav className="flex justify-between">
-                    <Link to="/" className="text-xl font-bold">🔆 suraj</Link>
-                    <div className="hidden lg:flex items-center">
+                    <Link to="/"><img className="text-xl font-bold" src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&duration=5000&pause=0&color=000000&vCenter=true&width=435&height=59&lines=%F0%9F%94%86+Suraj+Khot+%7C+Software+Developer" alt="Typing SVG" /></Link>
+
+                    <div className="hidden lg:flex items-center px-4 text-xl">
                         <Link to="/" className="px-4 hover:font-bold">Home</Link>
                         <Link to="/about" className="px-4 hover:font-bold">About</Link>
                         <Link to="/projects" className="px-4 hover:font-bold">Projects</Link>
@@ -40,10 +41,10 @@ const Header = () => {
             {
                 show &&
                 <div className="flex flex-col justify-center items-end">
-                    <Link to="/" className="px-4 hover:font-bold">Home</Link>
-                    <Link to="/about" className="px-4 hover:font-bold">About</Link>
-                    <Link to="/projects" className="px-4 hover:font-bold">Projects</Link>
-                    <Link to="/contact" className="px-4 hover:font-bold">Contact</Link>
+                    <Link onClick={display} to="/" className="px-4 hover:font-bold">Home</Link>
+                    <Link onClick={display} to="/about" className="px-4 hover:font-bold">About</Link>
+                    <Link onClick={display} to="/projects" className="px-4 hover:font-bold">Projects</Link>
+                    <Link onClick={display} to="/contact" className="px-4 hover:font-bold">Contact</Link>
                 </div>
             }
         </>
